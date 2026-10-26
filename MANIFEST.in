@@ -1,0 +1,7 @@
+# Ship only product files. Local AI memory, run outputs, shortcuts and CI
+# config stay in the repository checkout but never enter an sdist/wheel.
+prune .workbuddy
+prune outputs
+prune .github
+exclude *.lnk
+global-exclude *.py[cod] __pycache__ *.pkl

@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "floquet-soc"
+description = "General Wannier-Floquet-SOC engineering framework"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{name = "yingjie wei"}]
+keywords = ["wannier90", "floquet", "spin-orbit coupling", "condensed matter"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "matplotlib>=3.6",
+]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7",
+    "ruff>=0.1",
+]
+
+[project.scripts]
+floquet-soc = "floquet_soc.cli:main"
+floquet_soc = "floquet_soc.cli:main"
+
+[tool.setuptools]
+packages = {find = {include = ["floquet_soc*"]}}
+
+[tool.setuptools.dynamic]
+version = {attr = "floquet_soc.version.__version__"}
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+filterwarnings = [
+    "ignore::DeprecationWarning",
+]
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+ignore = ["E501"]

@@ -1,0 +1,23 @@
+{
+  "name": "Pt",
+  "hw": 1.0,
+  "gamma": 0.02,
+  "polarization": "circular",
+  "sign": -1,
+  "pmax": 3,
+  "gmax": 0.08440332921840121,
+  "bessel_truncation_residual": 1.3211507827725258e-07,
+  "num_wann": 18,
+  "nrpts": 125,
+  "wsvec_expanded": false,
+  "convention": "H_p(k) = sum_R H_p(R)/ndegen exp(2*pi*i k.R); H(k,t) = sum_p H_p(k) exp(-i p omega t)",
+  "files": [
+    "wannier90_hr_p-3.dat",
+    "wannier90_hr_p-2.dat",
+    "wannier90_hr_p-1.dat",
+    "wannier90_hr_p+0.dat",
+    "wannier90_hr_p+1.dat",
+    "wannier90_hr_p+2.dat",
+    "wannier90_hr_p+3.dat"
+  ]
+}
