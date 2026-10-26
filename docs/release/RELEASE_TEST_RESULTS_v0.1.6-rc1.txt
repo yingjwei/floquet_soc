@@ -1,0 +1,28 @@
+﻿floquet_soc v0.1.6-rc1 - full test suite
+========================================
+command : python -m unittest discover -s tests -v   (FLOQUET_SOC_JOBS=1)
+date    : 2026-10-23
+result  : Ran 90 tests in 611.0 s   (second run after cache-robustness fix; see note)
+          OK (skipped=2)
+
+NOTE: an earlier run of this suite (before the cache-key version fix) showed
+2 errors caused by stale pre-v0.1.6 pickled models in outputs/_cache lacking
+HR_full; fixed by making Hk/Hk_batch/displacement_tensor/getattr-robust,
+adding WannierModel.__setstate__, and including the framework version in the
+parsed-model cache key.  The final run above is clean.
+
+new tests (tests/test_wsvec.py, 5 tests):
+  - wsvec header flags: use_ws_distance=true, write_ndegen_applied absent
+  - 260100 blocks, 11626 non-zero shifts, 506 multi-shift; expanded R 225->261
+  - on-grid H equivalence (2.3e-13), off-grid convention difference (>1e-4 eV)
+  - Peierls H(k,A) uses the same expanded vectors; A=0 == Hk
+  - spin operator wsvec-aware, off-grid Hermiticity 1.1e-15
+  - Rashba convention regression: ws-aware 44.3 vs plain 64.8 meV*A
+
+validate (same data, v0.1.6-rc1):
+  MoSSe : 28 PASS / 0 FAIL / 1 WARN (spin R source = wannier90_wsvec.dat, 261 R)
+  PbNV  : 27 PASS / 0 FAIL / 2 WARN (no wsvec file -> unchanged)
+  Pt    : 25 PASS / 0 FAIL / 4 WARN (no wsvec file -> unchanged)
+
+known skips (unchanged): Pt hr-less limitation, formatted-spn fixture.
+

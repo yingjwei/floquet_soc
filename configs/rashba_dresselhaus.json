@@ -1,0 +1,25 @@
+{
+  "name": "RashbaDresselhaus",
+  "kind": "analytic",
+  "model": {
+    "type": "rashba_dresselhaus",
+    "hbar2_over_2m": 0.5,
+    "alpha": 0.1,
+    "beta": 0.1
+  },
+  "kmesh": {
+    "n": 31,
+    "kmax": 0.15
+  },
+  "spin": {
+    "source": "pauli"
+  },
+  "notes": "Benchmark 3: alpha=beta persistent spin texture.",
+  "drive": {
+    "hw": 1.0,
+    "gamma": 0.05,
+    "polarization": "circular",
+    "sign": -1,
+    "a_ref": 1.0
+  }
+}

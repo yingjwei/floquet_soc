@@ -1,0 +1,215 @@
+{
+  "title": "validate: PbNV",
+  "summary": {
+    "PASS": 27,
+    "FAIL": 0,
+    "WARN": 2,
+    "BLOCKED": 0,
+    "SKIP": 0
+  },
+  "checks": [
+    {
+      "name": "model_parse",
+      "status": "PASS",
+      "detail": "kind=wannier90, num_wann=156",
+      "value": null,
+      "tol": null
+    },
+    {
+      "name": "win_metadata",
+      "status": "PASS",
+      "detail": "num_wann=156, num_bands=192, spinors=True, kpoints=36, mp_grid=[6, 6, 1]; source=wannier90.win",
+      "value": null,
+      "tol": null
+    },
+    {
+      "name": "H_R_hermiticity",
+      "status": "PASS",
+      "detail": "max|H(-R)-H(R)^dag| = 0.00e+00 (tol 1e-10)",
+      "value": null,
+      "tol": null
+    },
+    {
+      "name": "Hk_hermiticity",
+      "status": "PASS",
+      "detail": "max|H(k)-H(k)^dag| = 8.88e-15 (tol 1e-10, 5 k probes incl. off-mesh, wsvec=no)",
+      "value": null,
+      "tol": null
+    },
+    {
+      "name": "ndegen_consistency",
+      "status": "PASS",
+      "detail": "ndegen in [1,4], mismatched R/-R pairs: 0",
+      "value": null,
+      "tol": null
+    },
+    {
+      "name": "wannier_centres",
+      "status": "PASS",
+      "detail": "tau source = wannier90_centres.xyz",
+      "value": null,
+      "tol": null
+    },
+    {
+      "name": "static_gap",
+      "status": "PASS",
+      "detail": "indirect gap on chosen k-path = 1.487060 eV (num_electrons=112)",
+      "value": null,
+      "tol": null
+    },
+    {
+      "name": "spn_format",
+      "status": "PASS",
+      "detail": "wannier90.spn: formatted-spn, header='Written by VASP:    unknown system', num_bands=192, num_kpts=36",
+      "value": null,
+      "tol": null
+    },
+    {
+      "name": "spn_hermiticity",
+      "status": "PASS",
+      "detail": "max|S-S^dag| = 4.44e-16",
+      "value": null,
+      "tol": null
+    },
+    {
+      "name": "spn_real_diagonal",
+      "status": "PASS",
+      "detail": "max|Im diag| = 2.22e-16",
+      "value": null,
+      "tol": null
+    },
+    {
+      "name": "spn_pauli_eigenvalue_bound",
+      "status": "PASS",
+      "detail": "eigenvalues in [-1.000,+1.000]; Pauli bound [-1,1]",
+      "value": null,
+      "tol": null
+    },
+    {
+      "name": "spn_spin_sum_rule",
+      "status": "WARN",
+      "detail": "eig(sum_i S_i^2) in [0.719,3.000] (3 for a spin-complete basis; <3 means spin weight outside the Wannier band window)",
+      "value": null,
+      "tol": null
+    },
+    {
+      "name": "spn_band_polarization_bound",
+      "status": "PASS",
+      "detail": "max per-band |<sigma>| = 1.000",
+      "value": null,
+      "tol": null
+    },
+    {
+      "name": "spin_hermiticity",
+      "status": "PASS",
+      "detail": "max|S-S^dag| = 4.44e-16 (tolerance 1e-10)",
+      "value": null,
+      "tol": null
+    },
+    {
+      "name": "spin_real_diagonal",
+      "status": "PASS",
+      "detail": "max|Im diag| = 2.22e-16 (tolerance 1e-10)",
+      "value": null,
+      "tol": null
+    },
+    {
+      "name": "spin_eigenvalue_bound",
+      "status": "PASS",
+      "detail": "eigenvalues in [-1.000,+1.000], Pauli bound [-1,1]",
+      "value": null,
+      "tol": null
+    },
+    {
+      "name": "spin_diagonal_polarization_bound",
+      "status": "PASS",
+      "detail": "max |<sigma>_band| = 1.000 (Pauli bound 1)",
+      "value": null,
+      "tol": null
+    },
+    {
+      "name": "spin_wannier_interpolation_set",
+      "status": "PASS",
+      "detail": "R set source = wannier90_hr.dat (49 R vectors, ndegen in [1,4])",
+      "value": null,
+      "tol": null
+    },
+    {
+      "name": "spin_wannier_hermiticity",
+      "status": "PASS",
+      "detail": "max|S-S^dag| = 0.00e+00",
+      "value": null,
+      "tol": null
+    },
+    {
+      "name": "spin_wannier_trs",
+      "status": "PASS",
+      "detail": "max|sorted eig S(-k) + reverse sorted eig S(k)| = 0.0017 (0 expected for a TRS-preserving non-magnetic system; large values indicate mismatched runs or inaccurate spin matrices)",
+      "value": null,
+      "tol": null
+    },
+    {
+      "name": "spin_wannier_interpolation",
+      "status": "PASS",
+      "detail": "max|S(k_mesh)-S_W(k_mesh)| = 9.67e-12",
+      "value": null,
+      "tol": null
+    },
+    {
+      "name": "spin_wannier_hermiticity_offgrid",
+      "status": "PASS",
+      "detail": "WS/ndegen interpolation: max|S(k)-S(k)^dag| off-grid = 6.66e-16",
+      "value": null,
+      "tol": null
+    },
+    {
+      "name": "spin_wannier_eigenvalue_bound",
+      "status": "PASS",
+      "detail": "eig range [-1.000,+1.000] (Pauli bound [-1,1])",
+      "value": null,
+      "tol": null
+    },
+    {
+      "name": "spin_wannier_sum_rule",
+      "status": "WARN",
+      "detail": "eig(sum_i S_i^2) in [2.786,3.000] (3 for a spin-complete basis; <3 means spin weight outside the Wannier window)",
+      "value": null,
+      "tol": null
+    },
+    {
+      "name": "checkpoint_hamiltonian_consistency",
+      "status": "PASS",
+      "detail": "max|H_W-H_hr| = 9.73e-06 eV (tol 0.001 eV over 36 k)",
+      "value": null,
+      "tol": null
+    },
+    {
+      "name": "checkpoint_transformation",
+      "status": "PASS",
+      "detail": "U unitarity 8.90e-14, v isometry 8.79e-14, lattice error 2.22e-16",
+      "value": null,
+      "tol": null
+    },
+    {
+      "name": "spin_operator_wannier_basis",
+      "status": "PASS",
+      "detail": "chk rotation applied (wannier90.chk); max|H_W-H_hr| = 9.73e-06 eV",
+      "value": null,
+      "tol": null
+    },
+    {
+      "name": "spin_texture_wannier",
+      "status": "PASS",
+      "detail": "gauge-consistent spin operators available; static spin texture can be computed (see `spin_static`)",
+      "value": null,
+      "tol": null
+    },
+    {
+      "name": "drive_config",
+      "status": "PASS",
+      "detail": "drive parameters parsed",
+      "value": null,
+      "tol": null
+    }
+  ]
+}

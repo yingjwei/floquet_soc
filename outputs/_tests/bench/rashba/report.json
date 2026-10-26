@@ -1,0 +1,54 @@
+{
+  "title": "Benchmark 2: Rashba SOC model",
+  "summary": {
+    "PASS": 6,
+    "FAIL": 0,
+    "WARN": 0,
+    "BLOCKED": 0,
+    "SKIP": 0
+  },
+  "checks": [
+    {
+      "name": "rashba_splitting_analytic",
+      "status": "PASS",
+      "detail": "max |DeltaE - 2 alpha k| = 6.94e-18 eV (tol 1e-10)",
+      "value": null,
+      "tol": null
+    },
+    {
+      "name": "rashba_spin_momentum_locking",
+      "status": "PASS",
+      "detail": "max |S - S_analytic| = 4.37e-16 (tol 1e-10)",
+      "value": null,
+      "tol": null
+    },
+    {
+      "name": "rashba_Sz_zero",
+      "status": "PASS",
+      "detail": "max |S_z| = 4.16e-16",
+      "value": null,
+      "tol": null
+    },
+    {
+      "name": "rashba_spin_norm_half",
+      "status": "PASS",
+      "detail": "max ||S| - 1/2| = 2.78e-16 (hbar units)",
+      "value": null,
+      "tol": null
+    },
+    {
+      "name": "rashba_pst_metric_inplane",
+      "status": "PASS",
+      "detail": "M eigenvalues = [ 0.5  0.5 -0. ], expected (0.5,0.5,0) (max dev 2.2e-16)",
+      "value": null,
+      "tol": null
+    },
+    {
+      "name": "rashba_hermiticity",
+      "status": "PASS",
+      "detail": "max|H-H^dag| = 0.0e+00",
+      "value": null,
+      "tol": null
+    }
+  ]
+}

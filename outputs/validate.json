@@ -1,0 +1,19 @@
+{
+  "title": "validate: PbNV",
+  "summary": {
+    "PASS": 0,
+    "FAIL": 1,
+    "WARN": 0,
+    "BLOCKED": 0,
+    "SKIP": 0
+  },
+  "checks": [
+    {
+      "name": "model_parse",
+      "status": "FAIL",
+      "detail": "Wannier model needs one of: win+hr, chk+hr, or chk+eig (win/hr missing)",
+      "value": null,
+      "tol": null
+    }
+  ]
+}

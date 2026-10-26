@@ -1,0 +1,15 @@
+﻿floquet_soc v0.1.7-rc1 (working tree) — full regression
+=====================================================
+command : python -m unittest discover -s tests -v  (FLOQUET_SOC_JOBS=1)
+date    : 2026-10-24
+result  : Ran 97 tests in 548.9 s
+          OK (skipped=4)
+
+new since v0.1.6:
+  - tests/test_spin_texture_map.py (band resolution, grids, DFT compare,
+    floquet_points label parsing)
+  - tests/test_provenance.py (config/input SHA256, missing files)
+  - tests/test_workflows_new.py (floquet_bands compute/save smoke)
+  - tests/test_wsvec.py (v0.1.6)
+  - floquet_points --subspace, floquet_bands, soc_scan
+  - benchmarks: spin_degenerate (3 PASS), magnetic_soc (4 PASS)

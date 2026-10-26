@@ -1,0 +1,68 @@
+{
+  "title": "Stage-B benchmark: driven Rashba model",
+  "summary": {
+    "PASS": 8,
+    "FAIL": 0,
+    "WARN": 0,
+    "BLOCKED": 0,
+    "SKIP": 0
+  },
+  "checks": [
+    {
+      "name": "B1_zero_drive_quasienergy",
+      "status": "PASS",
+      "detail": "max|eps - E_static mod hw| = 6.66e-16 eV (tol 1e-10)",
+      "value": null,
+      "tol": null
+    },
+    {
+      "name": "B1_zero_drive_spin_texture",
+      "status": "PASS",
+      "detail": "max|S_bar - S_static| = 1.15e-13 (tol 1e-10)",
+      "value": null,
+      "tol": null
+    },
+    {
+      "name": "B2_photon_weight_normalization",
+      "status": "PASS",
+      "detail": "max|sum_m w - 1| = 3.75e-14 (m_sp=12)",
+      "value": null,
+      "tol": null
+    },
+    {
+      "name": "B3_sambe_vs_evolution",
+      "status": "PASS",
+      "detail": "max quasienergy mismatch Sambe vs evolution = 8.18e-12 eV (n_harm=3, tol 1e-5)",
+      "value": null,
+      "tol": null
+    },
+    {
+      "name": "B4_effective_convergence",
+      "status": "PASS",
+      "detail": "max|eps - eig(H_eff)| for w=1,2,4,8 eV: [1.27e-08, 3.16e-09, 7.91e-10, 1.98e-10]; decreasing=True, ratio(8/1)=1.56e-02 (tol: final <1e-4 eV)",
+      "value": null,
+      "tol": null
+    },
+    {
+      "name": "B5_spin_weight_identity",
+      "status": "PASS",
+      "detail": "max|sum_m s_am,i - S_bar| = 6.11e-16",
+      "value": null,
+      "tol": null
+    },
+    {
+      "name": "B5_spin_spectrum_integrates_to_spin",
+      "status": "PASS",
+      "detail": "max|∫A^S dE - sum_alpha S_bar| = 6.20e-16 (sigma=2 meV, grid +-8 eV)",
+      "value": null,
+      "tol": null
+    },
+    {
+      "name": "B6_micromotion_reported",
+      "status": "PASS",
+      "detail": "max|S_bar - S_t0| = 8.948e-03 (difference between the correct periodic average and the t=0 approximation)",
+      "value": null,
+      "tol": null
+    }
+  ]
+}

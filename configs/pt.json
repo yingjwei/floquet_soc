@@ -1,0 +1,159 @@
+{
+  "name": "Pt",
+  "kind": "wannier90",
+  "root": "../benchmarks_data/Pt",
+  "notes": "Benchmark 7: fcc Pt spinor Wannier model (SOC, spin Hall tutorial data from wannier-developers/wannier-tutorials). num_bands=24, num_wann=18, mp_grid=4x4x4; no wannier90_hr.dat -> H(R) reconstructed from chk+eig (exact on the DFT mesh, Fourier interpolation between mesh points).",
+  "files": {
+    "win": "Pt.win",
+    "chk": "Pt.chk",
+    "eig": "Pt.eig",
+    "spn": "Pt.spn",
+    "wout": "Pt.wout",
+    "bands_ref": "Pt_band.dat",
+    "bands_ref_kpt": "Pt_band.kpt"
+  },
+  "spin": {
+    "source": "spn",
+    "file": "Pt.spn",
+    "chk": "Pt.chk",
+    "eig": "Pt.eig"
+  },
+  "num_electrons": 10,
+  "kpath": [
+    [
+      "W",
+      [
+        0.25,
+        0.75,
+        0.5
+      ]
+    ],
+    [
+      "L",
+      [
+        0.5,
+        0.5,
+        0.5
+      ]
+    ],
+    [
+      "G",
+      [
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    [
+      "X",
+      [
+        0.5,
+        0.0,
+        0.5
+      ]
+    ],
+    [
+      "W",
+      [
+        0.5,
+        0.25,
+        0.75
+      ]
+    ],
+    [
+      "G",
+      [
+        0.0,
+        0.0,
+        0.0
+      ]
+    ]
+  ],
+  "nk_seg": 15,
+  "kmesh": {
+    "dk": 0.01,
+    "kind": "auto-2pi-per-A"
+  },
+  "kmesh_pst": {
+    "dk": 0.01,
+    "kind": "auto-2pi-per-A"
+  },
+  "scan": {
+    "hw": [
+      0.5,
+      1.0,
+      1.5
+    ],
+    "gamma": [
+      0.0,
+      0.02,
+      0.04
+    ],
+    "kpt": [
+      [
+        0.1,
+        0.05,
+        0.0
+      ]
+    ],
+    "n_step": 160,
+    "m_sp": 48,
+    "window": [
+      -30,
+      30
+    ]
+  },
+  "converge": {
+    "kpt": [
+      [
+        0.1,
+        0.05,
+        0.0
+      ]
+    ],
+    "n_step": [
+      120,
+      160,
+      240
+    ],
+    "m_sp": [
+      16,
+      32,
+      48
+    ],
+    "window": [
+      -30,
+      30
+    ],
+    "tol_ebar": 0.0001,
+    "tol_spin": 0.001
+  },
+  "drive": {
+    "polarization": "circular",
+    "hw": 1.0,
+    "gamma": 0.02,
+    "sign": -1
+  },
+  "soc": {
+    "emin": 4.0,
+    "emax": 30.0
+  },
+  "kplane": [
+    [
+      1.0,
+      0.0,
+      1.0
+    ],
+    [
+      0.0,
+      1.0,
+      1.0
+    ]
+  ],
+  "jobs": 8,
+  "system": {
+    "type": "pt_nonmagnetic",
+    "inversion": true,
+    "time_reversal": true
+  }
+}

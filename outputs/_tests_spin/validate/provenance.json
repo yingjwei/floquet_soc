@@ -1,0 +1,82 @@
+{
+  "framework": "floquet_soc",
+  "version": "0.1.7-rc1",
+  "created_utc": "2026-10-26T00:51:39+00:00",
+  "python": "3.13.14",
+  "numpy": "2.5.4",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "config": {
+    "path": "D:\\Floquet\\floquet_soc\\configs\\pbnv.json",
+    "sha256": "e0ec37c208930ebcedc4c22d3f38f8e8ffdd1311de7936b1d36fec8748b7eca5"
+  },
+  "material": "PbNV",
+  "kind": "wannier90",
+  "num_electrons": 112,
+  "files": {
+    "win": {
+      "path": "D:\\Floquet\\PbNV\\wannier90.win",
+      "exists": true,
+      "size": 3503,
+      "sha256": "03114aceafd8d9769a4654e4f05e77262a39fabe2d1128099f303b60a14d9c94"
+    },
+    "hr": {
+      "path": "D:\\Floquet\\PbNV\\wannier90_hr.dat",
+      "exists": true,
+      "size": 59623510,
+      "sha256": "736b2b41d49142c5d53a57ceec4739aa1cc2616fecc87ec835077d6624899bd8"
+    },
+    "centres": {
+      "path": "D:\\Floquet\\PbNV\\wannier90_centres.xyz",
+      "exists": true,
+      "size": 9479,
+      "sha256": "7f8a532ea68413d02dc6dd4af74c9b5712f0e1ee00524625b420412acbc875b6"
+    },
+    "spn": {
+      "path": "D:\\Floquet\\PbNV\\wannier90.spn",
+      "exists": true,
+      "size": 106054358,
+      "sha256": "e221a95baaa9c310f7eb2bfd60ddcf2762b0d6d2de5b39a81df3ee32f0240e0d"
+    },
+    "chk": {
+      "path": "D:\\Floquet\\PbNV\\wannier90.chk",
+      "exists": true,
+      "size": 115409161,
+      "sha256": "58139e6305caaccc1b24a7ec8507c13dbdf0d443bc54d1747c8fdfa610dd1e84"
+    },
+    "eig": {
+      "path": "D:\\Floquet\\PbNV\\wannier90.eig",
+      "exists": true,
+      "size": 324864,
+      "sha256": "86f70ade2270c9f7779ecee1e27ad6c1d9a024e51f87ad8766e7cde3e7d6b481"
+    },
+    "amn": {
+      "path": "D:\\Floquet\\PbNV\\wannier90.amn",
+      "exists": true,
+      "size": 56070246,
+      "sha256": "d43ee9084542aec7351214e8b640a6d4453bb0fea94bde0e80973ccb42440b01"
+    },
+    "mmn": {
+      "path": "D:\\Floquet\\PbNV\\wannier90.mmn",
+      "exists": true,
+      "size": 294622806,
+      "sha256": "75b7e29ff544208d32b6e30cfe223bf1ecbd94f20798e38f6f32f8113ef0f4db"
+    }
+  },
+  "spin": {
+    "source": "spn",
+    "file": "D:\\Floquet\\PbNV\\wannier90.spn",
+    "chk": "D:\\Floquet\\PbNV\\wannier90.chk",
+    "eig": "D:\\Floquet\\PbNV\\wannier90.eig",
+    "notes": "chk-rotated Wannier spin operator; input .spn is a VASP LWRITE_SPN file (Pauli bound satisfied, sum rule [2.786,3], TRS deviation 2e-3 after the corrected criterion)"
+  },
+  "numerics": {
+    "n_step": 150,
+    "pmax": 3,
+    "m_sp": 16
+  },
+  "drive": {
+    "hw": 0.4,
+    "gamma": 0.1,
+    "polarization": "circular"
+  }
+}

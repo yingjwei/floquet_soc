@@ -1,0 +1,410 @@
+test_micromotion_convergence (test_pt_physics.FloquetMicromotionTests.test_micromotion_convergence) ... ok
+test_gauge_test_detects_degenerate_arbitrariness (test_pt_physics.GaugeInvarianceDetectionTests.test_gauge_test_detects_degenerate_arbitrariness) ... ok
+test_kramers_delta_and_gaps (test_pt_physics.KramersDefinitionTests.test_kramers_delta_and_gaps) ... ok
+test_no_soc_model_zero_splitting (test_pt_physics.KramersDefinitionTests.test_no_soc_model_zero_splitting) ... ok
+test_ws_supercell_even_grid (test_pt_physics.KramersDefinitionTests.test_ws_supercell_even_grid) ... ok
+test_kramers_offgrid_residual (test_pt_physics.PtPhysicsTests.test_kramers_offgrid_residual) ... ok
+test_kramers_on_dft_mesh (test_pt_physics.PtPhysicsTests.test_kramers_on_dft_mesh) ... ok
+test_offgrid_hermiticity (test_pt_physics.PtPhysicsTests.test_offgrid_hermiticity) ... ok
+test_spin_operator_offgrid_hermiticity (test_pt_physics.PtPhysicsTests.test_spin_operator_offgrid_hermiticity) ... ok
+test_rashba_splitting_and_spin_direction (test_pt_physics.RashbaAnalyticTests.test_rashba_splitting_and_spin_direction) ... ok
+test_non_pauli_spin_matrices_are_flagged (test_release_regressions.BadSpnQualityTests.test_non_pauli_spin_matrices_are_flagged) ... ok
+test_trs_violating_operator_is_flagged (test_release_regressions.BadSpnQualityTests.test_trs_violating_operator_is_flagged) ... ok
+test_kramers_delta_definition (test_release_regressions.FakeSocSplittingTests.test_kramers_delta_definition) ... ok
+test_pt_system_has_no_spin_pair_rows_in_soc_output (test_release_regressions.FakeSocSplittingTests.test_pt_system_has_no_spin_pair_rows_in_soc_output)
+Pt soc output must contain Kramers diagnostics, not spin splitting. ... ok
+test_alias_interpolation_breaks_hermiticity_offgrid (test_release_regressions.NonHermitianInterpolationTests.test_alias_interpolation_breaks_hermiticity_offgrid) ... ok
+test_ws_interpolation_is_hermitian_offgrid (test_release_regressions.NonHermitianInterpolationTests.test_ws_interpolation_is_hermitian_offgrid) ... ok
+test_msp_window_produces_deficit_fields (test_release_regressions.PhotonTruncationTests.test_msp_window_produces_deficit_fields) ... ok
+test_pt_pst_output_records_gauge_instability (test_release_regressions.PstGaugeDependenceTests.test_pt_pst_output_records_gauge_instability) ... ok
+test_version_string (test_release_regressions.VersionTests.test_version_string) ... ok
+test_checkpoint_structure (test_spin_wannier.TestCheckpoint.test_checkpoint_structure) ... ok
+test_hamiltonian_consistency (test_spin_wannier.TestCheckpoint.test_hamiltonian_consistency) ... ok
+test_read_wannier_spn_dispatch (test_spin_wannier.TestCheckpoint.test_read_wannier_spn_dispatch) ... skipped 'formatted spn fixture not present'
+test_rotation_and_interpolation (test_spin_wannier.TestCheckpoint.test_rotation_and_interpolation) ... ok
+test_spin_floquet_pbnv (test_spin_wannier.TestPbNVSpinTexture.test_spin_floquet_pbnv)
+Stage-B Floquet spin texture on the real material (small kmesh). ... D:\Floquet\floquet_soc\tests\test_spin_wannier.py:114: ResourceWarning: unclosed file <_io.TextIOWrapper name='D:\\Floquet\\floquet_soc\\configs\\pbnv.json' mode='r' encoding='utf-8'>
+  cfg = json.load(open(CFG, encoding="utf-8"))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+D:\Floquet\floquet_soc\tests\test_spin_wannier.py:122: ResourceWarning: unclosed file <_io.TextIOWrapper name='D:\\Floquet\\floquet_soc\\outputs\\_tests_spin\\pbnv_small.json' mode='w' encoding='utf-8'>
+  json.dump(cfg, open(tmp_cfg, "w", encoding="utf-8"),
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_static_spin_texture (test_spin_wannier.TestPbNVSpinTexture.test_static_spin_texture) ... D:\Floquet\floquet_soc\tests\test_spin_wannier.py:104: ResourceWarning: unclosed file <_io.TextIOWrapper name='D:\\Floquet\\floquet_soc\\outputs\\_tests_spin\\cfg_static.json' mode='w' encoding='utf-8'>
+  json.dump(cfg, open(tmp, "w", encoding="utf-8"))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_validate_passes (test_spin_wannier.TestPbNVSpinTexture.test_validate_passes) ... ok
+test_rashba_analytic (test_stage_a.TestAnalyticBenchmarks.test_rashba_analytic) ... ok
+test_rashba_benchmark_report (test_stage_a.TestAnalyticBenchmarks.test_rashba_benchmark_report) ... ok
+test_rashba_dresselhaus_benchmark_report (test_stage_a.TestAnalyticBenchmarks.test_rashba_dresselhaus_benchmark_report) ... ok
+test_rashba_dresselhaus_pst (test_stage_a.TestAnalyticBenchmarks.test_rashba_dresselhaus_pst) ... ok
+test_bands_and_status (test_stage_a.TestCLI.test_bands_and_status) ... ok
+test_benchmark_all (test_stage_a.TestCLI.test_benchmark_all) ... spin_floquet: 9 k-points, hw=0.4, gamma=0.1, n_step=80
+  using chk-rotated, k-interpolated spin operators
+  k 2/9
+  k 4/9
+  k 6/9
+  k 8/9
+  -> D:\Floquet\floquet_soc\outputs\_tests_spin\spin_floquet\spin_floquet.npz
+  figure: D:\Floquet\floquet_soc\outputs\_tests_spin\spin_floquet\spin_floquet.png
+  overlap matching purity: median=0.993, fraction>0.8=0.869
+spin texture: 81 k-points -> D:\Floquet\floquet_soc\outputs\_tests_spin\spin\spin_static.npz
+figure: D:\Floquet\floquet_soc\outputs\_tests_spin\spin\spin_static.png
+
+== validate: PbNV ==
+  [ok  ] model_parse: kind=wannier90, num_wann=156
+  [ok  ] win_metadata: num_wann=156, num_bands=192, spinors=True, kpoints=36, mp_grid=[6, 6, 1]; source=wannier90.win
+  [ok  ] H_R_hermiticity: max|H(-R)-H(R)^dag| = 0.00e+00 (tol 1e-10)
+  [ok  ] Hk_hermiticity: max|H(k)-H(k)^dag| = 8.88e-15 (tol 1e-10)
+  [ok  ] ndegen_consistency: ndegen in [1,4], mismatched R/-R pairs: 0
+  [ok  ] wannier_centres: tau source = wannier90_centres.xyz
+  [ok  ] static_gap: indirect gap on chosen k-path = 1.487060 eV (num_electrons=112)
+  [ok  ] spn_format: wannier90.spn: formatted-spn, header='Written by VASP:    unknown system', num_bands=192, num_kpts=36
+  [ok  ] spn_hermiticity: max|S-S^dag| = 4.44e-16
+  [ok  ] spn_real_diagonal: max|Im diag| = 2.22e-16
+  [ok  ] spn_pauli_eigenvalue_bound: eigenvalues in [-1.000,+1.000]; Pauli bound [-1,1]
+  [warn] spn_spin_sum_rule: eig(sum_i S_i^2) in [0.719,3.000] (3 for a spin-complete basis; <3 means spin weight outside the Wannier band window)
+  [ok  ] spn_band_polarization_bound: max per-band |<sigma>| = 1.000
+  [ok  ] spin_hermiticity: max|S-S^dag| = 4.44e-16 (tolerance 1e-10)
+  [ok  ] spin_real_diagonal: max|Im diag| = 2.22e-16 (tolerance 1e-10)
+  [ok  ] spin_eigenvalue_bound: eigenvalues in [-1.000,+1.000], Pauli bound [-1,1]
+  [ok  ] spin_diagonal_polarization_bound: max |<sigma>_band| = 1.000 (Pauli bound 1)
+  [ok  ] spin_wannier_hermiticity: max|S-S^dag| = 0.00e+00
+  [ok  ] spin_wannier_trs: max|sorted eig S(-k) + reverse sorted eig S(k)| = 0.0017 (0 expected for a TRS-preserving non-magnetic system; large values indicate mismatched runs or inaccurate spin matrices)
+  [ok  ] spin_wannier_interpolation: max|S(k_mesh)-S_W(k_mesh)| = 1.28e-11
+  [ok  ] spin_wannier_hermiticity_offgrid: NOT_VALIDATED: shifted-mesh alias fallback (off-grid |S-S^dag| = 4.26e-02); grid values are exact but off-grid spin physics is not validated for this backend
+  [ok  ] spin_wannier_eigenvalue_bound: eig range [-1.000,+1.000] (Pauli bound [-1,1])
+  [warn] spin_wannier_sum_rule: eig(sum_i S_i^2) in [2.786,3.000] (3 for a spin-complete basis; <3 means spin weight outside the Wannier window)
+  [ok  ] checkpoint_hamiltonian_consistency: max|H_W-H_hr| = 9.73e-06 eV (tol 0.001 eV over 36 k)
+  [ok  ] checkpoint_transformation: U unitarity 8.90e-14, v isometry 8.79e-14, lattice error 2.22e-16
+  [ok  ] spin_operator_wannier_basis: chk rotation applied (wannier90.chk); max|H_W-H_hr| = 9.73e-06 eV
+  [ok  ] spin_texture_wannier: gauge-consistent spin operators available; static spin texture can be computed (see `spin_static`)
+  [ok  ] drive_config: drive parameters parsed
+  summary: {'PASS': 26, 'FAIL': 0, 'WARN': 2, 'BLOCKED': 0, 'SKIP': 0}
+
+report: D:\Floquet\floquet_soc\outputs\_tests_spin\validate\validate.md
+        D:\Floquet\floquet_soc\outputs\_tests_spin\validate\validate.json
+bands: 81 k-points x 156 bands -> D:\Floquet\floquet_soc\outputs\_tests\bands\bands.npz
+  energy range: [-64.834, 6.661] eV
+figure: D:\Floquet\floquet_soc\outputs\_tests\bands\bands.png
+module                             feature                                      status
+--------------------------------------------------------------------------------------------------------------
+core/wannier.py                    Wannier90 win/hr/centres parsing, H(k)       stage A, benchmarked
+core/spin_operator.py              VASP binary spn decoding + quality metrics   stage A, structural checks (see report)
+core/spin_wannier.py               band -> Wannier spin rotation (chk) + interpolation stage A, validated on PbNV (H_W-H_hr 9e-6 eV)
+observables/spin_texture.py        static spin texture                          stage A, benchmarked on analytic models
+observables/pst.py                 PST collinearity metric                      stage A, benchmarked (Rashba/RD)
+drives/peierls.py                  general vector potential + Peierls H(k,t)    stage A, internal consistency only
+solvers/evolution.py               U(T) quasienergies, Ebar, photon weights     stage B, benchmarked (stage-B report)
+solvers/sambe.py                   Sambe Floquet Hamiltonian cross-check        stage B, benchmarked vs evolution
+solvers/effective.py               high-frequency van Vleck expansion           stage B, benchmarked (convergence)
+observables/spectral.py            Floquet spectral function A(k,E)             stage B, implemented
+observables/floquet_spin.py        periodic-averaged spin + spin-resolved spectra stage B, benchmarked (Rashba)
+observables/soc_splitting.py       SOC splitting / effective-term fitting       stage C, benchmarked (Rashba)
+observables/pst.py                 PST collinearity / axis / rotation analysis  stage C, benchmarked (Rashba/RD)
+workflows/scan.py                  drive-parameter scans (hw/gamma)             stage D, implemented + benchmarked (Rashba)
+workflows/converge.py              n_step / m_sp convergence                    stage D, implemented + benchmarked (Rashba/PbNV)
+benchmarks/pt.py                   Benchmark 7: fcc Pt (18 Wannier, chk+eig input) stage D, PASS/WARN report
+benchmarks_data/Pt/                public tutorial data for Benchmark 7 (provenance in README) data, 6.7 MB
+
+== Benchmark 2: Rashba SOC model ==
+  [ok  ] rashba_splitting_analytic: max |DeltaE - 2 alpha k| = 6.94e-18 eV (tol 1e-10)
+  [ok  ] rashba_spin_momentum_locking: max |S - S_analytic| = 4.37e-16 (tol 1e-10)
+  [ok  ] rashba_Sz_zero: max |S_z| = 4.16e-16
+  [ok  ] rashba_spin_norm_half: max ||S| - 1/2| = 2.78e-16 (hbar units)
+  [ok  ] rashba_pst_metric_inplane: M eigenvalues = [ 0.5  0.5 -0. ], expected (0.5,0.5,0) (max dev 2.2e-16)
+  [ok  ] rashba_hermiticity: max|H-H^dag| = 0.0e+00
+  summary: {'PASS': 6, 'FAIL': 0, 'WARN': 0, 'BLOCKED': 0, 'SKIP': 0}
+  figure: D:\Floquet\floquet_soc\outputs\_tests\bench\rashba\benchmark_rashba.png
+  report: D:\Floquet\floquet_soc\outputs\_tests\bench\rashba\report.md
+
+== Benchmark 3: Rashba+Dresselhaus, PST ==
+  [ok  ] rd_splitting_analytic: max |DeltaE - 2|d(k)|| = 2.78e-17 eV
+  [ok  ] rd_alpha_eq_beta_collinear: max |S - +-(1/2)(1,-1,0)/sqrt2| = 1.54e-15
+  [ok  ] rd_pst_collinearity_one: M eigenvalues = [1. 0. 0.] -> (1,0,0)
+  [ok  ] rd_pst_axis: PST axis = [ 0.70710678 -0.70710678  0.        ], angle to (1,-1,0)/sqrt2 = 0.00e+00 deg
+  [ok  ] rd_alpha_ne_beta_noncollinear: collinearity(alpha!=beta) = 0.6500 < 1
+  summary: {'PASS': 5, 'FAIL': 0, 'WARN': 0, 'BLOCKED': 0, 'SKIP': 0}
+  figure: D:\Floquet\floquet_soc\outputs\_tests\bench\rashba_dresselhaus\benchmark_rashba_dresselhaus.png
+  report: D:\Floquet\floquet_soc\outputs\_tests\bench\rashba_dresselhaus\report.md
+
+== Stage-B benchmark: driven Rashba model ==
+  [ok  ] B1_zero_drive_quasienergy: max|eps - E_static mod hw| = 6.52e-16 eV (tol 1e-10)
+  [ok  ] B1_zero_drive_spin_texture: max|S_bar - S_static| = 1.15e-13 (tol 1e-10)
+  [ok  ] B2_photon_weight_normalization: max|sum_m w - 1| = 3.75e-14 (m_sp=12)
+  [ok  ] B3_sambe_vs_evolution: max quasienergy mismatch Sambe vs evolution = 8.18e-12 eV (n_harm=3, tol 1e-5)
+  [ok  ] B4_effective_convergence: max|eps - eig(H_eff)| for w=1,2,4,8 eV: [1.27e-08, 3.16e-09, 7.91e-10, 1.98e-10]; decreasing=True, ratio(8/1)=1.56e-02 (tol: final <1e-4 eV)
+  [ok  ] B5_spin_weight_identity: max|sum_m s_am,i - S_bar| = 6.11e-16
+  [ok  ] B5_spin_spectrum_integrates_to_spin: max|∫A^S dE - sum_alpha S_bar| = 6.20e-16 (sigma=2 meV, grid +-8 eV)
+  [ok  ] B6_micromotion_reported: max|S_bar - S_t0| = 8.948e-03 (difference between the correct periodic average and the t=0 approximation)
+  summary: {'PASS': 8, 'FAIL': 0, 'WARN': 0, 'BLOCKED': 0, 'SKIP': 0}D:\Floquet\floquet_soc\floquet_soc\benchmarks\pt.py:47: ResourceWarning: unclosed file <_io.TextIOWrapper name='D:\\Floquet\\floquet_soc\\benchmarks_data\\Pt\\Pt_band.dat' mode='r' encoding='utf-8'>
+  for ln in open(band, encoding="utf-8"):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+D:\Floquet\floquet_soc\floquet_soc\benchmarks\pt.py:57: ResourceWarning: unclosed file <_io.TextIOWrapper name='D:\\Floquet\\floquet_soc\\benchmarks_data\\Pt\\Pt_band.kpt' mode='r' encoding='utf-8'>
+  lines = [ln.split() for ln in open(kpt, encoding="utf-8") if ln.strip()]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_unknown_command (test_stage_a.TestCLI.test_unknown_command) ... usage: floquet.py [-h] [--version]
+                  {validate,bands,spin_static,benchmark,_kchunk,status,spectrum,spin_floquet,soc,pst,scan,converge}
+                  ...
+floquet.py: error: argument cmd: invalid choice: 'not-a-command' (choose from validate, bands, spin_static, benchmark, _kchunk, status, spectrum, spin_floquet, soc, pst, scan, converge)
+ok
+test_validate_pbnv (test_stage_a.TestCLI.test_validate_pbnv) ... 
+  figure: D:\Floquet\floquet_soc\outputs\_tests\bench\floquet_rashba\benchmark_floquet_rashba.png
+  report: D:\Floquet\floquet_soc\outputs\_tests\bench\floquet_rashba\report.md
+
+== Benchmark 6: PbNV spin operator (chk-rotated) ==
+  [ok  ] checkpoint_transformation: U unitarity 8.90e-14, v isometry 8.79e-14, lattice error 2.22e-16
+  [ok  ] checkpoint_hamiltonian_consistency: max|H_W-H_hr| = 9.73e-06 eV (tol 0.001 eV over 36 k)
+  [ok  ] spin_wannier_hermiticity: max|S-S^dag| = 0.00e+00
+  [ok  ] spin_wannier_interpolation: max|S(k_mesh)-S_W(k_mesh)| = 1.28e-11
+  [ok  ] pbnv_kramers_degeneracy: informational (PbNV has no inversion symmetry, so Kramers degeneracy is not expected): nearest-partner energy distance over 81 k x 156 bands: max=2.99e-01 eV, median=5.24e-04 eV
+  [ok  ] pbnv_band_polarization_bound: max per-band |<sigma>| over path = 1.000 (Pauli bound 1); fraction >1: 0.000
+  [ok  ] pbnv_adjacent_spin_antisymmetry: informational (no Kramers pairing without inversion; avoided crossings rotate the spin): fraction of adjacent band pairs with |S_2n+S_2n+1|<0.1: 0.698 (median 0.008)
+  [ok  ] pbnv_spin_trs: max|sorted eig S(-k) + reverse sorted eig S(k)| = 0.0017 Pauli units (0 expected for a TRS-preserving non-magnetic system)
+  [ok  ] pbnv_spin_sum_rule: eig(sum_i S_i^2) in [2.786,3.000] over the Wannier mesh (3 for orthonormal complete basis)
+  [ok  ] pbnv_spn_input_quality: input .spn (VASP LWRITE_SPN, formatted): eig range [-1.000,+1.000], sum-rule [0.719,3.000]. Pauli bound satisfied; the sum-rule lower bound reflects spin weight outside the 156-dim Wannier window (not a data error).
+  summary: {'PASS': 10, 'FAIL': 0, 'WARN': 0, 'BLOCKED': 0, 'SKIP': 0}
+  figure: D:\Floquet\floquet_soc\outputs\_tests\bench\pbnv_spin\benchmark_pbnv_spin.png
+  report: D:\Floquet\floquet_soc\outputs\_tests\bench\pbnv_spin\report.md
+
+== Benchmark 7: fcc Pt (spinor SOC, chk+eig input) ==
+  [ok  ] pt_model_source: num_wann=18, num_bands=24, kpoints=64, mp_grid=[4, 4, 4]; source=wannier90.chk+eig Fourier interpolation (+win metadata); no hr.dat
+  [warn] pt_hr_reconstruction: no official wannier90_hr.dat available: H(R) rebuilt from chk+eig with the Wannier90 WS/ndegen convention (wannier90_ws); Hermitian off-grid and validated against the official PbNV hr.dat, but Pt off-grid accuracy is limited by the 4x4x4 mesh. Backend label: grid-consistent WS/ndegen reconstruction; official-hr comparison pending.
+  [ok  ] checkpoint_transformation: U unitarity 1.35e-13, v isometry 1.35e-13, lattice error 9.10e-18
+  [ok  ] checkpoint_hamiltonian_consistency: max|H_W-H_hr| = 4.62e-14 eV (tol 0.001 eV over 64 k)
+  [ok  ] spin_wannier_hermiticity: max|S-S^dag| = 0.00e+00
+  [ok  ] spin_wannier_hermiticity_offgrid: WS/ndegen interpolation: max|S(k)-S(k)^dag| off-grid = 6.66e-16
+  [ok  ] spin_wannier_interpolation: max|S(k_mesh)-S_W(k_mesh)| = 1.44e-15
+  [ok  ] spin_wannier_trs: max|sorted eig S(-k) + reverse sorted eig S(k)| = 0.0000 (0 expected for a TRS-preserving non-magnetic system; large values indicate mismatched runs or inaccurate spin matrices)
+  [ok  ] pt_hermiticity_offgrid: max|H(k)-H(k)^dag| on 200 off-grid k = 1.81e-14 eV (tol 1e-10 eV; Hermiticity must be checked before Kramers)
+  [ok  ] pt_kramers_mesh: delta_PT=max_n|E_{2n-1}-E_{2n}| on the original DFT mesh: max 7.934e-05 meV, median 7.532e-10 meV (tol 1e-6 eV = 1e-3 meV, from DFT eigenvalue precision 2e-10 eV)
+  [warn] pt_kramers_offgrid: off-grid Kramers residual: median 0.433 meV, max 4.54 meV at k=[-0.1027, -0.3645, 0.0031]. WARN, not PASS: for a strictly PT-symmetric static crystal the exact residual is zero; these meV values are numerical/interpolation error of the 4x4x4 WS/ndegen Hamiltonian, not physical. The error must be tracked against an official Wannier90 hr.dat before any PASS.
+  [warn] pt_quantitative_status: Pt is a software-interface and error-detection benchmark only at present: the official Wannier90 hr.dat is unavailable, the Pt_band.dat reference is not reproduced (index-aligned median 54 meV / max 1.14 eV), and the off-grid Kramers residual is a numerical artefact. Do NOT use Pt for quantitative SOC/Floquet material conclusions until the official-interpolation comparison passes.
+  [ok  ] pt_soc_splitting_not_applicable: PT-symmetric non-magnetic static Pt: SOC spin splitting is NOT APPLICABLE (Kramers pairs must be degenerate). `soc` reports delta_PT and inter-doublet gaps, no spin-paired splitting.
+  [warn] pt_pst_gauge_invariance: NOT_APPLICABLE: single-band PST is gauge dependent for a Kramers-degenerate PT system; the random-U(2) test shows the PST axis is arbitrary (dot product down to 0.21).
+  [ok  ] pt_spn_quality: input .spn (QE pw2wannier90): eig range [-1.0000,+1.0000], sum-rule [0.333,3.000] (Pauli bound 1, sum 3)
+  [ok  ] pt_spin_texture_finite: 729 k-points x 18 bands; figure band 9
+  [ok  ] pt_band_polarization_bound: max per-band |<sigma>| = 1.000 (Pauli bound 1)
+  [warn] pt_band_interpolation_vs_wannier90: index-aligned deviation over 593 path points: median 54.1 meV, max 1141.8 meV. WARN, not PASS: the official Pt hr.dat is unavailable and Pt_band.dat may have been produced with different Wannier settings (use_ws_distance); this comparison cannot validate the off-grid Hamiltonian.
+  summary: {'PASS': 13, 'FAIL': 0, 'WARN': 5, 'BLOCKED': 0, 'SKIP': 0}
+  figure: D:\Floquet\floquet_soc\outputs\_tests\bench\pt\benchmark_pt.png
+  report: D:\Floquet\floquet_soc\outputs\_tests\bench\pt\report.md
+
+benchmarks finished: PASS
+
+== validate: PbNV ==
+  [ok  ] model_parse: kind=wannier90, num_wann=156
+  [ok  ] win_metadata: num_wann=156, num_bands=192, spinors=True, kpoints=36, mp_grid=[6, 6, 1]; source=wannier90.win
+  [ok  ] H_R_hermiticity: max|H(-R)-H(R)^dag| = 0.00e+00 (tol 1e-10)
+  [ok  ] Hk_hermiticity: max|H(k)-H(k)^dag| = 8.88e-15 (tol 1e-10)
+  [ok  ] ndegen_consistency: ndegen in [1,4], mismatched R/-R pairs: 0
+  [ok  ] wannier_centres: tau source = wannier90_centres.xyz
+  [ok  ] static_gap: indirect gap on chosen k-path = 1.487060 eV (num_electrons=112)
+  [ok  ] spn_format: wannier90.spn: formatted-spn, header='Written by VASP:    unknown system', num_bands=192, num_kpts=36
+  [ok  ] spn_hermiticity: max|S-S^dag| = 4.44e-16
+  [ok  ] spn_real_diagonal: max|Im diag| = 2.22e-16
+  [ok  ] spn_pauli_eigenvalue_bound: eigenvalues in [-1.000,+1.000]; Pauli bound [-1,1]
+  [warn] spn_spin_sum_rule: eig(sum_i S_i^2) in [0.719,3.000] (3 for a spin-complete basis; <3 means spin weight outside the Wannier band window)
+  [ok  ] spn_band_polarization_bound: max per-band |<sigma>| = 1.000
+  [ok  ] spin_hermiticity: max|S-S^dag| = 4.44e-16 (tolerance 1e-10)
+  [ok  ] spin_real_diagonal: max|Im diag| = 2.22e-16 (tolerance 1e-10)
+  [ok  ] spin_eigenvalue_bound: eigenvalues in [-1.000,+1.000], Pauli bound [-1,1]
+  [ok  ] spin_diagonal_polarization_bound: max |<sigma>_band| = 1.000 (Pauli bound 1)
+  [ok  ] spin_wannier_hermiticity: max|S-S^dag| = 0.00e+00
+  [ok  ] spin_wannier_trs: max|sorted eig S(-k) + reverse sorted eig S(k)| = 0.0017 (0 expected for a TRS-preserving non-magnetic system; large values indicate mismatched runs or inaccurate spin matrices)
+  [ok  ] spin_wannier_interpolation: max|S(k_mesh)-S_W(k_mesh)| = 1.28e-11
+  [ok  ] spin_wannier_hermiticity_offgrid: NOT_VALIDATED: shifted-mesh alias fallback (off-grid |S-S^dag| = 4.26e-02); grid values are exact but off-grid spin physics is not validated for this backend
+  [ok  ] spin_wannier_eigenvalue_bound: eig range [-1.000,+1.000] (Pauli bound [-1,1])
+  [warn] spin_wannier_sum_rule: eig(sum_i S_i^2) in [2.786,3.000] (3 for a spin-complete basis; <3 means spin weight outside the Wannier window)
+  [ok  ] checkpoint_hamiltonian_consistency: max|H_W-H_hr| = 9.73e-06 eV (tol 0.001 eV over 36 k)
+  [ok  ] checkpoint_transformation: U unitarity 8.90e-14, v isometry 8.79e-14, lattice error 2.22e-16
+  [ok  ] spin_operator_wannier_basis: chk rotation applied (wannier90.chk); max|H_W-H_hr| = 9.73e-06 eV
+  [ok  ] spin_texture_wannier: gauge-consistent spin operators available; static spin texture can be computed (see `spin_static`)
+  [ok  ] drive_config: drive parameters parsedok
+test_drive_parameters (test_stage_a.TestDriveAndPeierls.test_drive_parameters) ... ok
+test_peierls_hermiticity (test_stage_a.TestDriveAndPeierls.test_peierls_hermiticity) ... ok
+test_peierls_reduces_to_hk_at_zero_field (test_stage_a.TestDriveAndPeierls.test_peierls_reduces_to_hk_at_zero_field) ... ok
+test_formatted_reader (test_stage_a.TestFormattedSpn.test_formatted_reader) ... ok
+test_missing_transform_error (test_stage_a.TestSpinOperator.test_missing_transform_error)
+In a directory with only a spn file, rotation must be refused. ... ok
+test_spn_numerical_quality_metrics (test_stage_a.TestSpinOperator.test_spn_numerical_quality_metrics) ... ok
+test_spn_structure (test_stage_a.TestSpinOperator.test_spn_structure) ... ok
+test_centres (test_stage_a.TestWannierInput.test_centres) ... ok
+test_hermiticity (test_stage_a.TestWannierInput.test_hermiticity) ... ok
+test_parse_dimensions (test_stage_a.TestWannierInput.test_parse_dimensions) ... ok
+test_static_gap_matches_pbnv_reference (test_stage_a.TestWannierInput.test_static_gap_matches_pbnv_reference) ... ok
+test_effective_convergence (test_stage_b.TestFloquetSolvers.test_effective_convergence) ... ok
+test_micromotion_is_included (test_stage_b.TestFloquetSolvers.test_micromotion_is_included) ... ok
+test_photon_weights_normalized (test_stage_b.TestFloquetSolvers.test_photon_weights_normalized) ... ok
+test_sambe_vs_evolution (test_stage_b.TestFloquetSolvers.test_sambe_vs_evolution) ... ok
+test_spin_resolved_spectral_identity (test_stage_b.TestFloquetSolvers.test_spin_resolved_spectral_identity) ... ok
+test_zero_drive_quasienergy (test_stage_b.TestFloquetSolvers.test_zero_drive_quasienergy) ... ok
+test_zero_drive_spin_texture (test_stage_b.TestFloquetSolvers.test_zero_drive_spin_texture) ... ok
+setUpClass (test_stage_b.TestPbNVRegression) ... skipped 'cross-engine reference missing; run gen_old_engine_ref.py'
+test_floquet_rashba_benchmark (test_stage_b.TestStageBBenchmarkReport.test_floquet_rashba_benchmark) ... ok
+test_spectrum_analytic (test_stage_b.TestStageBCLI.test_spectrum_analytic) ... D:\Floquet\floquet_soc\tests\test_stage_b.py:149: ResourceWarning: unclosed file <_io.TextIOWrapper name='D:\\Floquet\\floquet_soc\\configs\\rashba.json' mode='r' encoding='utf-8'>
+  cfg = json.load(open(os.path.join(HERE, "configs", "rashba.json"),
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+D:\Floquet\floquet_soc\tests\test_stage_b.py:155: ResourceWarning: unclosed file <_io.TextIOWrapper name='D:\\Floquet\\floquet_soc\\outputs\\_tests_b\\rashba_small.json' mode='w' encoding='utf-8'>
+  json.dump(cfg, open(fn, "w", encoding="utf-8"), ensure_ascii=False)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_spin_floquet_analytic (test_stage_b.TestStageBCLI.test_spin_floquet_analytic) ... ok
+test_spin_floquet_blocked_without_transform (test_stage_b.TestStageBCLI.test_spin_floquet_blocked_without_transform) ... D:\Floquet\floquet_soc\tests\test_stage_b.py:195: ResourceWarning: unclosed file <_io.TextIOWrapper name='D:\\Floquet\\floquet_soc\\configs\\rashba.json' mode='r' encoding='utf-8'>
+  cfg = json.load(open(os.path.join(HERE, "configs", "rashba.json"),
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+D:\Floquet\floquet_soc\tests\test_stage_b.py:199: ResourceWarning: unclosed file <_io.TextIOWrapper name='D:\\Floquet\\floquet_soc\\outputs\\_tests_b\\blocked.json' mode='w' encoding='utf-8'>
+  json.dump(cfg, open(fn, "w", encoding="utf-8"), ensure_ascii=False)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_status_lists_stage_b (test_stage_b.TestStageBCLI.test_status_lists_stage_b) ... ok
+test_rashba_pst_eigenvalues (test_stage_c.TestPST.test_rashba_pst_eigenvalues) ... ok
+test_rd_noncollinear (test_stage_c.TestPST.test_rd_noncollinear) ... ok
+test_rd_pst_collinear_axis (test_stage_c.TestPST.test_rd_pst_collinear_axis) ... ok
+test_adjacent_splitting_analytic (test_stage_c.TestSocSplitting.test_adjacent_splitting_analytic) ... ok
+test_fit_linear_model_recovers_rashba (test_stage_c.TestSocSplitting.test_fit_linear_model_recovers_rashba) ... ok
+test_soc_off_requires_matched_basis (test_stage_c.TestSocSplitting.test_soc_off_requires_matched_basis) ... ok
+test_spin_paired_splitting (test_stage_c.TestSocSplitting.test_spin_paired_splitting) ... ok
+test_pst_analytic (test_stage_c.TestStageCCLI.test_pst_analytic) ... ok
+test_soc_analytic (test_stage_c.TestStageCCLI.test_soc_analytic) ... ok
+test_soc_pbnv (test_stage_c.TestStageCCLI.test_soc_pbnv) ... ok
+test_pt_benchmark (test_stage_d.TestBenchmark7.test_pt_benchmark) ... D:\Floquet\floquet_soc\floquet_soc\benchmarks\pt.py:47: ResourceWarning: unclosed file <_io.TextIOWrapper name='D:\\Floquet\\floquet_soc\\benchmarks_data\\Pt\\Pt_band.dat' mode='r' encoding='utf-8'>
+  for ln in open(band, encoding="utf-8"):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+D:\Floquet\floquet_soc\floquet_soc\benchmarks\pt.py:57: ResourceWarning: unclosed file <_io.TextIOWrapper name='D:\\Floquet\\floquet_soc\\benchmarks_data\\Pt\\Pt_band.kpt' mode='r' encoding='utf-8'>
+  lines = [ln.split() for ln in open(kpt, encoding="utf-8") if ln.strip()]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_pt_chk_eig_reconstruction (test_stage_d.TestBenchmark7.test_pt_chk_eig_reconstruction) ... ok
+test_converge_analytic (test_stage_d.TestConvergenceWorkflow.test_converge_analytic) ... ok
+test_converge_cli (test_stage_d.TestConvergenceWorkflow.test_converge_cli) ... ok
+test_converge_pbnv_small (test_stage_d.TestConvergenceWorkflow.test_converge_pbnv_small) ... D:\Floquet\floquet_soc\tests\test_stage_d.py:98: ResourceWarning: unclosed file <_io.TextIOWrapper name='D:\\Floquet\\floquet_soc\\outputs\\_tests_d\\pbnv_conv.json' mode='w' encoding='utf-8'>
+  json.dump(cfg, open(fn, "w", encoding="utf-8"), ensure_ascii=False)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_scan_analytic (test_stage_d.TestScanWorkflow.test_scan_analytic) ... ok
+test_scan_cli (test_stage_d.TestScanWorkflow.test_scan_cli) ... 
+  summary: {'PASS': 26, 'FAIL': 0, 'WARN': 2, 'BLOCKED': 0, 'SKIP': 0}
+
+report: D:\Floquet\floquet_soc\outputs\_tests\validate.md
+        D:\Floquet\floquet_soc\outputs\_tests\validate.json
+
+== Stage-B benchmark: driven Rashba model ==
+  [ok  ] B1_zero_drive_quasienergy: max|eps - E_static mod hw| = 6.52e-16 eV (tol 1e-10)
+  [ok  ] B1_zero_drive_spin_texture: max|S_bar - S_static| = 1.15e-13 (tol 1e-10)
+  [ok  ] B2_photon_weight_normalization: max|sum_m w - 1| = 3.75e-14 (m_sp=12)
+  [ok  ] B3_sambe_vs_evolution: max quasienergy mismatch Sambe vs evolution = 8.18e-12 eV (n_harm=3, tol 1e-5)
+  [ok  ] B4_effective_convergence: max|eps - eig(H_eff)| for w=1,2,4,8 eV: [1.27e-08, 3.16e-09, 7.91e-10, 1.98e-10]; decreasing=True, ratio(8/1)=1.56e-02 (tol: final <1e-4 eV)
+  [ok  ] B5_spin_weight_identity: max|sum_m s_am,i - S_bar| = 6.11e-16
+  [ok  ] B5_spin_spectrum_integrates_to_spin: max|∫A^S dE - sum_alpha S_bar| = 6.20e-16 (sigma=2 meV, grid +-8 eV)
+  [ok  ] B6_micromotion_reported: max|S_bar - S_t0| = 8.948e-03 (difference between the correct periodic average and the t=0 approximation)
+  summary: {'PASS': 8, 'FAIL': 0, 'WARN': 0, 'BLOCKED': 0, 'SKIP': 0}
+spectrum: 2 bands, 41 k-points, hw=1, gamma=0.05, n_step=80
+  k 8/41
+  k 16/41
+  k 24/41
+  k 32/41
+  k 40/41
+  -> D:\Floquet\floquet_soc\outputs\_tests_b\spec\spectrum.npz
+  figure: D:\Floquet\floquet_soc\outputs\_tests_b\spec\spectrum.png
+spin_floquet: 49 k-points, hw=1, gamma=0.05, n_step=80
+  k 12/49
+  k 24/49
+  k 36/49
+  k 48/49
+  -> D:\Floquet\floquet_soc\outputs\_tests_b\spin\spin_floquet.npz
+  figure: D:\Floquet\floquet_soc\outputs\_tests_b\spin\spin_floquet.png
+  overlap matching purity: median=1.000, fraction>0.8=1.000
+BLOCKED: Floquet spin texture requires a gauge-consistent spin operator.
+wannier90.spn has 3 bands but the Wannier model has num_wann=2: the spin matrices are in the WAVECAR band basis, not the Wannier basis. Rotation requires wannier90.chk (U matrices) and wannier90.eig; missing: D:\Floquet\floquet_soc\outputs\_tests_b\fake_spn\wannier90.chk, D:\Floquet\floquet_soc\outputs\_tests_b\fake_spn\wannier90.eig
+missing files: D:\Floquet\floquet_soc\outputs\_tests_b\fake_spn\wannier90.chk, D:\Floquet\floquet_soc\outputs\_tests_b\fake_spn\wannier90.eig
+module                             feature                                      status
+--------------------------------------------------------------------------------------------------------------
+core/wannier.py                    Wannier90 win/hr/centres parsing, H(k)       stage A, benchmarked
+core/spin_operator.py              VASP binary spn decoding + quality metrics   stage A, structural checks (see report)
+core/spin_wannier.py               band -> Wannier spin rotation (chk) + interpolation stage A, validated on PbNV (H_W-H_hr 9e-6 eV)
+observables/spin_texture.py        static spin texture                          stage A, benchmarked on analytic models
+observables/pst.py                 PST collinearity metric                      stage A, benchmarked (Rashba/RD)
+drives/peierls.py                  general vector potential + Peierls H(k,t)    stage A, internal consistency only
+solvers/evolution.py               U(T) quasienergies, Ebar, photon weights     stage B, benchmarked (stage-B report)
+solvers/sambe.py                   Sambe Floquet Hamiltonian cross-check        stage B, benchmarked vs evolution
+solvers/effective.py               high-frequency van Vleck expansion           stage B, benchmarked (convergence)
+observables/spectral.py            Floquet spectral function A(k,E)             stage B, implemented
+observables/floquet_spin.py        periodic-averaged spin + spin-resolved spectra stage B, benchmarked (Rashba)
+observables/soc_splitting.py       SOC splitting / effective-term fitting       stage C, benchmarked (Rashba)
+observables/pst.py                 PST collinearity / axis / rotation analysis  stage C, benchmarked (Rashba/RD)
+workflows/scan.py                  drive-parameter scans (hw/gamma)             stage D, implemented + benchmarked (Rashba)
+workflows/converge.py              n_step / m_sp convergence                    stage D, implemented + benchmarked (Rashba/PbNV)
+benchmarks/pt.py                   Benchmark 7: fcc Pt (18 Wannier, chk+eig input) stage D, PASS/WARN report
+benchmarks_data/Pt/                public tutorial data for Benchmark 7 (provenance in README) data, 6.7 MB
+pst: 961 k-points, bands [0, 1]
+  M eigenvalues = [1. 0. 0.]
+  collinearity (largest eigenvalue) = 1.0000
+  PST axis = [ 0.7071 -0.7071  0.    ]
+  n_states = 1860, mean polarization = 0.500
+  -> D:\Floquet\floquet_soc\outputs\_tests_c\pst\pst.npz
+figure: D:\Floquet\floquet_soc\outputs\_tests_c\pst\pst.png
+soc: 2 bands, 41 k-points, window [-1.00,1.00] eV, 1 adjacent pairs
+  largest adjacent splittings:
+    bands 0-1: max 60.00 meV, min 0.00 meV
+  spin-related spectral splittings (spin-paired pairs; this is a spectral splitting, not a calibrated SOC constant):
+    bands 0-1: median 30.00 meV, max 60.00 meV
+  figure: D:\Floquet\floquet_soc\outputs\_tests_c\soc\soc_spin_splitting.png
+  -> D:\Floquet\floquet_soc\outputs\_tests_c\soc\soc_splitting.npz
+  figure: D:\Floquet\floquet_soc\outputs\_tests_c\soc\soc_splitting.png
+soc: 156 bands, 21 k-points, window [-1.08,1.01] eV, 6 adjacent pairs
+  largest adjacent splittings:
+    bands 111-112: max 2326.15 meV, min 1493.77 meV
+    bands 115-116: max 383.21 meV, min 39.51 meV
+    bands 113-114: max 184.37 meV, min 0.60 meV
+    bands 114-115: max 96.14 meV, min 0.13 meV
+    bands 112-113: max 88.01 meV, min 0.10 meV
+    bands 110-111: max 29.34 meV, min 0.19 meV
+  spin-related spectral splittings (spin-paired pairs; this is a spectral splitting, not a calibrated SOC constant):
+    bands 110-111: median 0.51 meV, max 29.34 meV
+    bands 114-115: median 0.39 meV, max 63.20 meV
+    bands 112-113: median 0.38 meV, max 88.01 meV
+  figure: D:\Floquet\floquet_soc\outputs\_tests_c\pbnv\soc_spin_splitting.png
+  -> D:\Floquet\floquet_soc\outputs\_tests_c\pbnv\soc_splitting.npz
+  figure: D:\Floquet\floquet_soc\outputs\_tests_c\pbnv\soc_splitting.png
+converge: 2 bands at k=[0.05 0.03 0.  ], hw=1, gamma=0.05
+  reference: n_step=120, m_sp=8
+  n_step convergence:
+    n_step=  60  dEbar=7.92e-11 eV  dS=1.47e-06  wsum_err=5.9e-15  matched=2
+    n_step= 120  dEbar=0.00e+00 eV  dS=0.00e+00  wsum_err=1.8e-14  matched=2
+  m_sp convergence:
+    m_sp=  4    dEbar=0.00e+00 eV  dS=0.00e+00  dWsum=0.00e+00  w_def(max/med/n>1e-3)=1.81e-14/1.78e-14/0  matched=2
+    m_sp=  8    dEbar=0.00e+00 eV  dS=0.00e+00  dWsum=0.00e+00  w_def(max/med/n>1e-3)=1.81e-14/1.78e-14/0  matched=2
+  -> D:\Floquet\floquet_soc\outputs\_tests_d\conv\converge.npz
+  figure: D:\Floquet\floquet_soc\outputs\_tests_d\conv\converge.png
+  invariants: sumEbar=0.005900 eV, sumS=[-0.  0.  0.], sumW=2.000000
+  convergence: PASS (production=[60, 4], max dEbar=7.92e-11 eV, max dS=1.47e-06, max dWsum=1.23e-14, accepted m_sp>=4, max invariant dev=2.62e-15)
+converge: 156 bands at k=[0.05 0.03 0.  ], hw=0.4, gamma=0.1
+  reference: n_step=200, m_sp=8
+  n_step convergence:
+    n_step=  80  dEbar=1.73e-05 eV  dS=5.74e-05  wsum_err=1.5e-06  matched=10
+    n_step= 120  dEbar=7.56e-06 eV  dS=2.72e-05  wsum_err=1.5e-06  matched=10
+    n_step= 200  dEbar=0.00e+00 eV  dS=0.00e+00  wsum_err=1.5e-06  matched=10
+  m_sp convergence:
+    m_sp=  4    dEbar=0.00e+00 eV  dS=0.00e+00  dWsum=9.98e-01  w_def(max/med/n>1e-3)=9.98e-01/3.21e-03/11  matched=10
+    m_sp=  8    dEbar=0.00e+00 eV  dS=0.00e+00  dWsum=0.00e+00  w_def(max/med/n>1e-3)=1.50e-06/3.95e-11/0  matched=10
+  -> D:\Floquet\floquet_soc\outputs\_tests_d\pbnv_conv\converge.npz
+  figure: D:\Floquet\floquet_soc\outputs\_tests_d\pbnv_conv\converge.png
+  invariants: sumEbar=-1567.290041 eV, sumS=[-3.100e-05 -1.650e-04 -2.331e-03], sumW=41.977867
+  convergence: PASS (production=[120, 4], max dEbar=1.73e-05 eV, max dS=5.74e-05, max dWsum=9.98e-01, accepted m_sp>=8, max invariant dev=7.05e-12)
+scan: 2 bands, hw=[0.004, 0.008] eV, gamma=[0.0, 0.002], 1 k-point(s), n_step=100, m_sp=8
+    hw    gamma   eps_spread  mean|S|  max|S|  wsum_errok
+
+----------------------------------------------------------------------
+Ran 74 tests in 360.592s
+
+OK (skipped=2)
+
+  0.00  0.000   0.0003     0.500   0.500   1.9e-14
+  0.00  0.002   0.0003     0.500   0.500   1.4e-14
+  0.01  0.000   0.0043     0.500   0.500   1.7e-14
+  0.01  0.002   0.0043     0.499   0.499   1.3e-14
+  -> D:\Floquet\floquet_soc\outputs\_tests_d\scan\scan.npz
+  figure: D:\Floquet\floquet_soc\outputs\_tests_d\scan\scan.png

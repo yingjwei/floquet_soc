@@ -1,0 +1,1 @@
+{"name": "Rashba", "kind": "analytic", "model": {"type": "rashba", "hbar2_over_2m": 0.5, "alpha": 0.1}, "kmesh": {"n": 7, "kmax": 0.1}, "spin": {"source": "pauli"}, "notes": "Benchmark 2: 2-band Rashba; spin operators are exact Pauli matrices.", "drive": {"hw": 1.0, "gamma": 0.05, "polarization": "circular", "sign": -1, "a_ref": 1.0}, "numerics": {"n_step": 80, "m_sp": 8}}

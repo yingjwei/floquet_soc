@@ -1,0 +1,47 @@
+{
+  "title": "Benchmark 3: Rashba+Dresselhaus, PST",
+  "summary": {
+    "PASS": 5,
+    "FAIL": 0,
+    "WARN": 0,
+    "BLOCKED": 0,
+    "SKIP": 0
+  },
+  "checks": [
+    {
+      "name": "rd_splitting_analytic",
+      "status": "PASS",
+      "detail": "max |DeltaE - 2|d(k)|| = 2.78e-17 eV",
+      "value": null,
+      "tol": null
+    },
+    {
+      "name": "rd_alpha_eq_beta_collinear",
+      "status": "PASS",
+      "detail": "max |S - +-(1/2)(1,-1,0)/sqrt2| = 1.54e-15",
+      "value": null,
+      "tol": null
+    },
+    {
+      "name": "rd_pst_collinearity_one",
+      "status": "PASS",
+      "detail": "M eigenvalues = [1. 0. 0.] -> (1,0,0)",
+      "value": null,
+      "tol": null
+    },
+    {
+      "name": "rd_pst_axis",
+      "status": "PASS",
+      "detail": "PST axis = [ 0.70710678 -0.70710678  0.        ], angle to (1,-1,0)/sqrt2 = 0.00e+00 deg",
+      "value": null,
+      "tol": null
+    },
+    {
+      "name": "rd_alpha_ne_beta_noncollinear",
+      "status": "PASS",
+      "detail": "collinearity(alpha!=beta) = 0.6500 < 1",
+      "value": null,
+      "tol": null
+    }
+  ]
+}

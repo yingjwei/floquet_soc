@@ -1,0 +1,23 @@
+﻿floquet_soc v0.1.5-rc1 - full test suite
+========================================
+command : python -m unittest discover -s tests -v   (FLOQUET_SOC_JOBS=1)
+date    : 2026-10-23
+result  : Ran 85 tests in 585.860s
+          OK (skipped=2)
+
+new tests (tests/test_ws_grid.py, 8 tests):
+  - ws_supercell odd(15)/even(16)/single-point grids: shapes, R<->-R, ndegen
+  - MoSSe: wannier90_wsvec.dat R set == hr.dat R set; blocks = nrpts*nw^2;
+    every wsvec vector is an integer supercell multiple of mp_grid
+  - MoSSe: spin operator uses wannier90_hr.dat R set; off-grid Hermiticity
+    1.11e-15; mesh round-trip 2.42e-11
+  - MoSSe: from_chk_eig reproduces chk+hr on the DFT mesh (<1e-3 eV)
+  - PbNV (even 6x6 mesh): 49 R with ndegen 1/2/4 accepted, off-grid
+    Hermiticity machine precision
+
+validate (same data, after patch):
+  MoSSe : 28 PASS / 0 FAIL / 1 WARN
+  PbNV  : 27 PASS / 0 FAIL / 2 WARN
+  Pt    : 25 PASS / 0 FAIL / 4 WARN
+
+known skips (unchanged): Pt hr-less limitation, formatted-spn fixture.
